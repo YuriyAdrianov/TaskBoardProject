@@ -1,13 +1,14 @@
 package com.yuriyadr.taskboard.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "TaskStatus")
 public class TaskStatus {
 
     @Id
+    @SequenceGenerator(name = "taskStatusIdSeq", sequenceName = "task_status_id_seq", allocationSize = 1, initialValue = 10000)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "taskStatusIdSeq")
     @Column(name = "id", nullable = false)
     private Long id;
 

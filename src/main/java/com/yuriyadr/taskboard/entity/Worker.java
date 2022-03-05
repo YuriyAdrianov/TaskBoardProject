@@ -1,13 +1,14 @@
 package com.yuriyadr.taskboard.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Worker")
 public class Worker {
 
     @Id
+    @SequenceGenerator(name = "workerIdSeq", sequenceName = "worker_id_seq", allocationSize = 1, initialValue = 10000)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "workerIdSeq")
     @Column(name = "id", nullable = false)
     private Long id;
 
