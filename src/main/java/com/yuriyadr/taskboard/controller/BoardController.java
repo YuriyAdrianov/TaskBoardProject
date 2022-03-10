@@ -36,7 +36,7 @@ public class BoardController {
         return ResponseEntity.ok(boardService.create(boardDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<BoardDto> updateBoard(@RequestBody BoardDto boardDto) {
         return ResponseEntity.ok(boardService.update(boardDto));
     }

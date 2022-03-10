@@ -36,7 +36,7 @@ public class ProjectStatusController {
         return ResponseEntity.ok(projectStatusService.create(projectStatusDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<ProjectStatusDto> updateProjectStatus(@RequestBody ProjectStatusDto projectStatusDto) {
         return ResponseEntity.ok(projectStatusService.update(projectStatusDto));
     }

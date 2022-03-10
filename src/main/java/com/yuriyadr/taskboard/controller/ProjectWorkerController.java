@@ -36,7 +36,7 @@ public class ProjectWorkerController {
         return ResponseEntity.ok(projectWorkerService.create(projectWorkerDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<ProjectWorkerDto> updateProjectWorker(@RequestBody ProjectWorkerDto projectWorkerDto) {
         return ResponseEntity.ok(projectWorkerService.update(projectWorkerDto));
     }

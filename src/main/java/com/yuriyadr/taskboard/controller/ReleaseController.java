@@ -36,7 +36,7 @@ public class ReleaseController {
         return ResponseEntity.ok(releaseService.create(releaseDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<ReleaseDto> updateRelease(@RequestBody ReleaseDto releaseDto) {
         return ResponseEntity.ok(releaseService.update(releaseDto));
     }

@@ -36,7 +36,7 @@ public class TaskController {
         return ResponseEntity.ok(taskService.create(taskDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) {
         return ResponseEntity.ok(taskService.update(taskDto));
     }

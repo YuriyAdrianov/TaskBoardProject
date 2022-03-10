@@ -36,7 +36,7 @@ public class TaskStatusHistoryController {
         return ResponseEntity.ok(taskStatusHistoryService.create(taskStatusHistoryDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<TaskStatusHistoryDto> updateTaskStatusHistory(@RequestBody TaskStatusHistoryDto taskStatusHistoryDto) {
         return ResponseEntity.ok(taskStatusHistoryService.update(taskStatusHistoryDto));
     }

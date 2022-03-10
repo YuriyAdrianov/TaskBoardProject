@@ -36,7 +36,7 @@ public class TaskStatusController {
         return ResponseEntity.ok(taskStatusService.create(taskStatusDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<TaskStatusDto> updateTaskStatus(@RequestBody TaskStatusDto taskStatusDto) {
         return ResponseEntity.ok(taskStatusService.update(taskStatusDto));
     }

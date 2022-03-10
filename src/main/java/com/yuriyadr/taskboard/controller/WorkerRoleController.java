@@ -36,7 +36,7 @@ public class WorkerRoleController {
         return ResponseEntity.ok(workerRoleService.create(workerRoleDto));
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<WorkerRoleDto> updateWorkerRole(@RequestBody WorkerRoleDto workerRoleDto) {
         return ResponseEntity.ok(workerRoleService.update(workerRoleDto));
     }
