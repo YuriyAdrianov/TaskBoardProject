@@ -33,17 +33,17 @@ public class WorkerRoleController {
 
     @PostMapping
     public ResponseEntity<WorkerRoleDto> createWorkerRole(@RequestBody WorkerRoleDto workerRoleDto) {
-        return ResponseEntity.ok(workerRoleService.createWorkerRole(workerRoleDto));
+        return ResponseEntity.ok(workerRoleService.create(workerRoleDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<WorkerRoleDto> updateWorkerRole(@RequestBody WorkerRoleDto workerRoleDto) {
-        return ResponseEntity.ok(workerRoleService.updateWorkerRole(workerRoleDto));
+        return ResponseEntity.ok(workerRoleService.update(workerRoleDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteWorkerRole(@PathVariable Long id) {
-        workerRoleService.deleteWorkerRole(id);
+        workerRoleService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

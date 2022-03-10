@@ -33,17 +33,17 @@ public class ProjectStatusController {
 
     @PostMapping
     public ResponseEntity<ProjectStatusDto> createProjectStatus(@RequestBody ProjectStatusDto projectStatusDto) {
-        return ResponseEntity.ok(projectStatusService.createProjectStatus(projectStatusDto));
+        return ResponseEntity.ok(projectStatusService.create(projectStatusDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<ProjectStatusDto> updateProjectStatus(@RequestBody ProjectStatusDto projectStatusDto) {
-        return ResponseEntity.ok(projectStatusService.updateProjectStatus(projectStatusDto));
+        return ResponseEntity.ok(projectStatusService.update(projectStatusDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProjectStatus(@PathVariable Long id) {
-        projectStatusService.deleteProjectStatus(id);
+        projectStatusService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

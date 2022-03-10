@@ -33,17 +33,17 @@ public class ProjectStatusHistoryController {
 
     @PostMapping
     public ResponseEntity<ProjectStatusHistoryDto> createProjectStatusHistory(@RequestBody ProjectStatusHistoryDto projectStatusHistoryDto) {
-        return ResponseEntity.ok(projectStatusHistoryService.createProjectStatusHistory(projectStatusHistoryDto));
+        return ResponseEntity.ok(projectStatusHistoryService.create(projectStatusHistoryDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<ProjectStatusHistoryDto> updateProjectStatusHistory(@RequestBody ProjectStatusHistoryDto projectStatusHistoryDto) {
-        return ResponseEntity.ok(projectStatusHistoryService.updateProjectStatusHistory(projectStatusHistoryDto));
+        return ResponseEntity.ok(projectStatusHistoryService.update(projectStatusHistoryDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProjectStatusHistory(@PathVariable Long id) {
-        projectStatusHistoryService.deleteProjectStatusHistory(id);
+        projectStatusHistoryService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

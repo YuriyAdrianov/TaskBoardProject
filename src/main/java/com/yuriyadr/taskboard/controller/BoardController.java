@@ -33,17 +33,17 @@ public class BoardController {
 
     @PostMapping
     public ResponseEntity<BoardDto> createBoard(@RequestBody BoardDto boardDto) {
-        return ResponseEntity.ok(boardService.createBoard(boardDto));
+        return ResponseEntity.ok(boardService.create(boardDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<BoardDto> updateBoard(@RequestBody BoardDto boardDto) {
-        return ResponseEntity.ok(boardService.updateBoard(boardDto));
+        return ResponseEntity.ok(boardService.update(boardDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteBoard(@PathVariable Long id) {
-        boardService.deleteBoard(id);
+        boardService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

@@ -33,17 +33,17 @@ public class TaskStatusHistoryController {
 
     @PostMapping
     public ResponseEntity<TaskStatusHistoryDto> createTaskStatusHistory(@RequestBody TaskStatusHistoryDto taskStatusHistoryDto) {
-        return ResponseEntity.ok(taskStatusHistoryService.createTaskStatusHistory(taskStatusHistoryDto));
+        return ResponseEntity.ok(taskStatusHistoryService.create(taskStatusHistoryDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<TaskStatusHistoryDto> updateTaskStatusHistory(@RequestBody TaskStatusHistoryDto taskStatusHistoryDto) {
-        return ResponseEntity.ok(taskStatusHistoryService.updateTaskStatusHistory(taskStatusHistoryDto));
+        return ResponseEntity.ok(taskStatusHistoryService.update(taskStatusHistoryDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTaskStatusHistory(@PathVariable Long id) {
-        taskStatusHistoryService.deleteTaskStatusHistory(id);
+        taskStatusHistoryService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

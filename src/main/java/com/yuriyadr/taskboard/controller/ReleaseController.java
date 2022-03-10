@@ -33,17 +33,17 @@ public class ReleaseController {
 
     @PostMapping
     public ResponseEntity<ReleaseDto> createRelease(@RequestBody ReleaseDto releaseDto) {
-        return ResponseEntity.ok(releaseService.createRelease(releaseDto));
+        return ResponseEntity.ok(releaseService.create(releaseDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<ReleaseDto> updateRelease(@RequestBody ReleaseDto releaseDto) {
-        return ResponseEntity.ok(releaseService.updateRelease(releaseDto));
+        return ResponseEntity.ok(releaseService.update(releaseDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteRelease(@PathVariable Long id) {
-        releaseService.deleteRelease(id);
+        releaseService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }

@@ -33,17 +33,17 @@ public class TaskController {
 
     @PostMapping
     public ResponseEntity<TaskDto> createTask(@RequestBody TaskDto taskDto) {
-        return ResponseEntity.ok(taskService.createTask(taskDto));
+        return ResponseEntity.ok(taskService.create(taskDto));
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) {
-        return ResponseEntity.ok(taskService.updateTask(taskDto));
+        return ResponseEntity.ok(taskService.update(taskDto));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTask(@PathVariable Long id) {
-        taskService.deleteTask(id);
+        taskService.delete(id);
         return ResponseEntity.ok("Ok.");
     }
 }
