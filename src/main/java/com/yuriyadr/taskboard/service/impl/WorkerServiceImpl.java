@@ -1,4 +1,8 @@
 package com.yuriyadr.taskboard.service.impl;
 
-public class WorkerServiceImpl {
+import com.yuriyadr.taskboard.service.WorkerService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WorkerServiceImpl implements WorkerService {
 }
