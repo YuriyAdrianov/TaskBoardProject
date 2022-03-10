@@ -21,7 +21,7 @@ public class TaskStatusHistoryController {
         this.taskStatusHistoryService = taskStatusHistoryService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<TaskStatusHistoryDto> findById() {
         return ResponseEntity.ok(taskStatusHistoryService.findById());
     }

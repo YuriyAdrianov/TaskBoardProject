@@ -21,7 +21,7 @@ public class WorkerController {
         this.workerService = workerService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<WorkerDto> findById() {
         return ResponseEntity.ok(workerService.findById());
     }

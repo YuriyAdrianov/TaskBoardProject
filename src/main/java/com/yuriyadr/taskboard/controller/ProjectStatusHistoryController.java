@@ -21,7 +21,7 @@ public class ProjectStatusHistoryController {
         this.projectStatusHistoryService = projectStatusHistoryService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<ProjectStatusHistoryDto> findById() {
         return ResponseEntity.ok(projectStatusHistoryService.findById());
     }

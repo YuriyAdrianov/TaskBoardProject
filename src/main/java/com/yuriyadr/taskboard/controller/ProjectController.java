@@ -21,7 +21,7 @@ public class ProjectController {
         this.projectService = projectService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<ProjectDto> findById() {
         return ResponseEntity.ok(projectService.findById());
     }

@@ -21,7 +21,7 @@ public class ReleaseController {
         this.releaseService = releaseService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<ReleaseDto> findById() {
         return ResponseEntity.ok(releaseService.findById());
     }

@@ -21,7 +21,7 @@ public class TaskStatusController {
         this.taskStatusService = taskStatusService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<TaskStatusDto> findById() {
         return ResponseEntity.ok(taskStatusService.findById());
     }

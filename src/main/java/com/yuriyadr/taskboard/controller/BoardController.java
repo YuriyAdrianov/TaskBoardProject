@@ -21,7 +21,7 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-    @GetMapping("/{id{")
+    @GetMapping("/{id}")
     public ResponseEntity<BoardDto> findById() {
         return ResponseEntity.ok(boardService.findById());
     }
