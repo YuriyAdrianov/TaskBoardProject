@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "Worker controller", description = "Worker management / Управление списком работников")
+@Tag(name = "Worker controller", description = "Worker management")
 @RestController
 @RequestMapping("/worker")
 public class WorkerController {
