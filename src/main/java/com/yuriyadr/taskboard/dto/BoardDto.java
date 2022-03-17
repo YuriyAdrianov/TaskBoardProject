@@ -1,12 +1,13 @@
 package com.yuriyadr.taskboard.dto;
 
+
 public class BoardDto {
 
     private String name;
 
     private String description;
 
-    private String projectName;
+    private ProjectDto project;
 
     public String getName() {
         return name;
@@ -24,11 +25,11 @@ public class BoardDto {
         this.description = description;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public ProjectDto getProject() {
+        return project;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setProject(ProjectDto project) {
+        this.project = project;
     }
 }
