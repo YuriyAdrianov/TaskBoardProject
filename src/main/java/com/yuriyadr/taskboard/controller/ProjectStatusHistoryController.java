@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.requestDto.ProjectStatusHistoryDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectStatusHistoryRequestDto;
 import com.yuriyadr.taskboard.service.ProjectStatusHistoryService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class ProjectStatusHistoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjectStatusHistoryDto> findById() {
+    public ResponseEntity<ProjectStatusHistoryRequestDto> findById() {
         return ResponseEntity.ok(projectStatusHistoryService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<ProjectStatusHistoryDto>> findAll() {
+    public ResponseEntity<List<ProjectStatusHistoryRequestDto>> findAll() {
         return ResponseEntity.ok(projectStatusHistoryService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<ProjectStatusHistoryDto> createProjectStatusHistory(@RequestBody ProjectStatusHistoryDto projectStatusHistoryDto) {
-        return ResponseEntity.ok(projectStatusHistoryService.create(projectStatusHistoryDto));
+    public ResponseEntity<ProjectStatusHistoryRequestDto> createProjectStatusHistory(@RequestBody ProjectStatusHistoryRequestDto projectStatusHistoryRequestDto) {
+        return ResponseEntity.ok(projectStatusHistoryService.create(projectStatusHistoryRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProjectStatusHistoryDto> updateProjectStatusHistory(@RequestBody ProjectStatusHistoryDto projectStatusHistoryDto) {
-        return ResponseEntity.ok(projectStatusHistoryService.update(projectStatusHistoryDto));
+    public ResponseEntity<ProjectStatusHistoryRequestDto> updateProjectStatusHistory(@RequestBody ProjectStatusHistoryRequestDto projectStatusHistoryRequestDto) {
+        return ResponseEntity.ok(projectStatusHistoryService.update(projectStatusHistoryRequestDto));
     }
 
     @DeleteMapping("/{id}")

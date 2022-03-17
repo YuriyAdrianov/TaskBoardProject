@@ -1,14 +1,14 @@
-package com.yuriyadr.taskboard.dto.requestDto;
+package com.yuriyadr.taskboard.dto.responseDto;
 
-public class ProjectRequestDto {
+public class ProjectResponseDto {
 
     private String name;
 
     private String description;
 
-    private ProjectStatusHistoryRequestDto projectStatus;
+    private ProjectStatusHistoryResponseDto projectStatus;
 
-    public ProjectRequestDto(String name, String description, ProjectStatusHistoryRequestDto projectStatus) {
+    public ProjectResponseDto(String name, String description, ProjectStatusHistoryResponseDto projectStatus) {
         this.name = name;
         this.description = description;
         this.projectStatus = projectStatus;
@@ -22,7 +22,7 @@ public class ProjectRequestDto {
         return description;
     }
 
-    public ProjectStatusHistoryRequestDto getProjectStatus() {
+    public ProjectStatusHistoryResponseDto getProjectStatus() {
         return projectStatus;
     }
 }
