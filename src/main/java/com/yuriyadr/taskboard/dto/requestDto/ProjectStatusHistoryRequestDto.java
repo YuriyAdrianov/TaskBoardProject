@@ -10,7 +10,9 @@ public class ProjectStatusHistoryRequestDto {
 
     private ProjectRequestDto project;
 
-    public ProjectStatusHistoryRequestDto(LocalDateTime timestamp, ProjectStatusRequestDto projectStatus, ProjectRequestDto project) {
+    public ProjectStatusHistoryRequestDto(LocalDateTime timestamp,
+                                          ProjectStatusRequestDto projectStatus,
+                                          ProjectRequestDto project) {
         this.timestamp = timestamp;
         this.projectStatus = projectStatus;
         this.project = project;

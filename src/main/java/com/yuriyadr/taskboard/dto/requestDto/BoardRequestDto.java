@@ -9,7 +9,9 @@ public class BoardRequestDto {
 
     private ProjectRequestDto project;
 
-    public BoardRequestDto(String name, String description, ProjectRequestDto project) {
+    public BoardRequestDto(String name,
+                           String description,
+                           ProjectRequestDto project) {
         this.name = name;
         this.description = description;
         this.project = project;

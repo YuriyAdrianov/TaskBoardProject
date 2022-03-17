@@ -8,7 +8,9 @@ public class ProjectWorkerRequestDto {
 
     private WorkerRoleRequestDto workerRole;
 
-    public ProjectWorkerRequestDto(ProjectRequestDto project, WorkerRequestDto worker, WorkerRoleRequestDto workerRole) {
+    public ProjectWorkerRequestDto(ProjectRequestDto project,
+                                   WorkerRequestDto worker,
+                                   WorkerRoleRequestDto workerRole) {
         this.project = project;
         this.worker = worker;
         this.workerRole = workerRole;

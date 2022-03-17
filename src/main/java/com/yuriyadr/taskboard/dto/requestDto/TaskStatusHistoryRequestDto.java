@@ -10,7 +10,9 @@ public class TaskStatusHistoryRequestDto {
 
     private String taskName;
 
-    public TaskStatusHistoryRequestDto(LocalDateTime timestamp, TaskStatusRequestDto taskStatus, String taskName) {
+    public TaskStatusHistoryRequestDto(LocalDateTime timestamp,
+                                       TaskStatusRequestDto taskStatus,
+                                       String taskName) {
         this.timestamp = timestamp;
         this.taskStatus = taskStatus;
         this.taskName = taskName;

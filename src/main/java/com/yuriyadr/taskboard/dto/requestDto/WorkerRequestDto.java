@@ -6,7 +6,8 @@ public class WorkerRequestDto {
 
     private Boolean activity;
 
-    public WorkerRequestDto(String name, Boolean activity) {
+    public WorkerRequestDto(String name,
+                            Boolean activity) {
         this.name = name;
         this.activity = activity;
     }

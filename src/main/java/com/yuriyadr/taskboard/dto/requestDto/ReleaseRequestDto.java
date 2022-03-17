@@ -14,7 +14,11 @@ public class ReleaseRequestDto {
 
     private LocalDate endDate;
 
-    public ReleaseRequestDto(ProjectRequestDto project, Double version, String description, LocalDate startDate, LocalDate endDate) {
+    public ReleaseRequestDto(ProjectRequestDto project,
+                             Double version,
+                             String description,
+                             LocalDate startDate,
+                             LocalDate endDate) {
         this.project = project;
         this.version = version;
         this.description = description;

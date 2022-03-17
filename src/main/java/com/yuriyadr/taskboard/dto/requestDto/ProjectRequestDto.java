@@ -8,7 +8,9 @@ public class ProjectRequestDto {
 
     private ProjectStatusHistoryRequestDto projectStatus;
 
-    public ProjectRequestDto(String name, String description, ProjectStatusHistoryRequestDto projectStatus) {
+    public ProjectRequestDto(String name,
+                             String description,
+                             ProjectStatusHistoryRequestDto projectStatus) {
         this.name = name;
         this.description = description;
         this.projectStatus = projectStatus;

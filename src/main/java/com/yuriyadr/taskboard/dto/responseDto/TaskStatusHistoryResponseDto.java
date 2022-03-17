@@ -4,16 +4,26 @@ import java.time.LocalDateTime;
 
 public class TaskStatusHistoryResponseDto {
 
+    private Long id;
+
     private LocalDateTime timestamp;
 
     private TaskStatusResponseDto taskStatus;
 
     private String taskName;
 
-    public TaskStatusHistoryResponseDto(LocalDateTime timestamp, TaskStatusResponseDto taskStatus, String taskName) {
+    public TaskStatusHistoryResponseDto(Long id,
+                                        LocalDateTime timestamp,
+                                        TaskStatusResponseDto taskStatus,
+                                        String taskName) {
+        this.id = id;
         this.timestamp = timestamp;
         this.taskStatus = taskStatus;
         this.taskName = taskName;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public LocalDateTime getTimestamp() {

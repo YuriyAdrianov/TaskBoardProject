@@ -6,7 +6,8 @@ public class TaskStatusRequestDto {
 
     private String description;
 
-    public TaskStatusRequestDto(String name, String description) {
+    public TaskStatusRequestDto(String name,
+                                String description) {
         this.name = name;
         this.description = description;
     }

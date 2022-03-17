@@ -2,13 +2,22 @@ package com.yuriyadr.taskboard.dto.responseDto;
 
 public class WorkerRoleResponseDto {
 
+    private Long id;
+
     private String name;
 
     private String description;
 
-    public WorkerRoleResponseDto(String name, String description) {
+    public WorkerRoleResponseDto(Long id,
+                                 String name,
+                                 String description) {
+        this.id = id;
         this.name = name;
         this.description = description;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {

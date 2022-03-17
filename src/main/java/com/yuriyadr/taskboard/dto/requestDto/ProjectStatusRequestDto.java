@@ -6,7 +6,8 @@ public class ProjectStatusRequestDto {
 
     private String description;
 
-    public ProjectStatusRequestDto(String name, String description) {
+    public ProjectStatusRequestDto(String name,
+                                   String description) {
         this.name = name;
         this.description = description;
     }

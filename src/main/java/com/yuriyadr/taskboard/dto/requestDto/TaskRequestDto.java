@@ -16,7 +16,13 @@ public class TaskRequestDto {
 
     private TaskStatusHistoryRequestDto taskStatus;
 
-    public TaskRequestDto(BoardRequestDto board, String name, String description, WorkerRequestDto author, WorkerRequestDto executive, ReleaseRequestDto release, TaskStatusHistoryRequestDto taskStatus) {
+    public TaskRequestDto(BoardRequestDto board,
+                          String name,
+                          String description,
+                          WorkerRequestDto author,
+                          WorkerRequestDto executive,
+                          ReleaseRequestDto release,
+                          TaskStatusHistoryRequestDto taskStatus) {
         this.board = board;
         this.name = name;
         this.description = description;

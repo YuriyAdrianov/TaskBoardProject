@@ -6,7 +6,8 @@ public class WorkerRoleRequestDto {
 
     private String description;
 
-    public WorkerRoleRequestDto(String name, String description) {
+    public WorkerRoleRequestDto(String name,
+                                String description) {
         this.name = name;
         this.description = description;
     }
