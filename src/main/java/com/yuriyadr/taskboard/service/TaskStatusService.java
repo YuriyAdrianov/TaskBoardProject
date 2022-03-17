@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.TaskStatusDto;
+import com.yuriyadr.taskboard.dto.requestDto.TaskStatusRequestDto;
 
 import java.util.List;
 
 public interface TaskStatusService {
 
-    List<TaskStatusDto> findAll();
+    List<TaskStatusRequestDto> findAll();
 
-    TaskStatusDto findById();
+    TaskStatusRequestDto findById();
 
-    TaskStatusDto create(TaskStatusDto taskStatusDto);
+    TaskStatusRequestDto create(TaskStatusRequestDto taskStatusRequestDto);
 
-    TaskStatusDto update(TaskStatusDto taskStatusDto);
+    TaskStatusRequestDto update(TaskStatusRequestDto taskStatusRequestDto);
 
     void delete(Long id);
 }

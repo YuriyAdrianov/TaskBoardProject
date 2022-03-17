@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.WorkerRoleDto;
+import com.yuriyadr.taskboard.dto.requestDto.WorkerRoleRequestDto;
 
 import java.util.List;
 
 public interface WorkerRoleService {
 
-    List<WorkerRoleDto> findAll();
+    List<WorkerRoleRequestDto> findAll();
 
-    WorkerRoleDto findById();
+    WorkerRoleRequestDto findById();
 
-    WorkerRoleDto create(WorkerRoleDto workerRoleDto);
+    WorkerRoleRequestDto create(WorkerRoleRequestDto workerRoleRequestDto);
 
-    WorkerRoleDto update(WorkerRoleDto workerRoleDto);
+    WorkerRoleRequestDto update(WorkerRoleRequestDto workerRoleRequestDto);
 
     void delete(Long id);
 }

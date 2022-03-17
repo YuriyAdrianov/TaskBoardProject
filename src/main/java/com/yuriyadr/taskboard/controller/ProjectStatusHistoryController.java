@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.ProjectStatusHistoryDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectStatusHistoryDto;
 import com.yuriyadr.taskboard.service.ProjectStatusHistoryService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

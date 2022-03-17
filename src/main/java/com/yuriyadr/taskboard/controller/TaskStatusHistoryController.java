@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.TaskStatusHistoryDto;
+import com.yuriyadr.taskboard.dto.requestDto.TaskStatusHistoryRequestDto;
 import com.yuriyadr.taskboard.service.TaskStatusHistoryService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class TaskStatusHistoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TaskStatusHistoryDto> findById() {
+    public ResponseEntity<TaskStatusHistoryRequestDto> findById() {
         return ResponseEntity.ok(taskStatusHistoryService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<TaskStatusHistoryDto>> findAll() {
+    public ResponseEntity<List<TaskStatusHistoryRequestDto>> findAll() {
         return ResponseEntity.ok(taskStatusHistoryService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<TaskStatusHistoryDto> createTaskStatusHistory(@RequestBody TaskStatusHistoryDto taskStatusHistoryDto) {
-        return ResponseEntity.ok(taskStatusHistoryService.create(taskStatusHistoryDto));
+    public ResponseEntity<TaskStatusHistoryRequestDto> createTaskStatusHistory(@RequestBody TaskStatusHistoryRequestDto taskStatusHistoryRequestDto) {
+        return ResponseEntity.ok(taskStatusHistoryService.create(taskStatusHistoryRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TaskStatusHistoryDto> updateTaskStatusHistory(@RequestBody TaskStatusHistoryDto taskStatusHistoryDto) {
-        return ResponseEntity.ok(taskStatusHistoryService.update(taskStatusHistoryDto));
+    public ResponseEntity<TaskStatusHistoryRequestDto> updateTaskStatusHistory(@RequestBody TaskStatusHistoryRequestDto taskStatusHistoryRequestDto) {
+        return ResponseEntity.ok(taskStatusHistoryService.update(taskStatusHistoryRequestDto));
     }
 
     @DeleteMapping("/{id}")

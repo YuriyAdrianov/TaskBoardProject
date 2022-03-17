@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.ProjectDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectRequestDto;
 import com.yuriyadr.taskboard.service.ProjectService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class ProjectController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjectDto> findById() {
+    public ResponseEntity<ProjectRequestDto> findById() {
         return ResponseEntity.ok(projectService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<ProjectDto>> findAll() {
+    public ResponseEntity<List<ProjectRequestDto>> findAll() {
         return ResponseEntity.ok(projectService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<ProjectDto> createProject(@RequestBody ProjectDto projectDto) {
-        return ResponseEntity.ok(projectService.create(projectDto));
+    public ResponseEntity<ProjectRequestDto> createProject(@RequestBody ProjectRequestDto projectRequestDto) {
+        return ResponseEntity.ok(projectService.create(projectRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProjectDto> updateProject(@RequestBody ProjectDto projectDto) {
-        return ResponseEntity.ok(projectService.update(projectDto));
+    public ResponseEntity<ProjectRequestDto> updateProject(@RequestBody ProjectRequestDto projectRequestDto) {
+        return ResponseEntity.ok(projectService.update(projectRequestDto));
     }
 
     @DeleteMapping("/{id}")

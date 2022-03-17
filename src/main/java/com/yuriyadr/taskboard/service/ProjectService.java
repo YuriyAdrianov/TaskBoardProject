@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.ProjectDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectRequestDto;
 
 import java.util.List;
 
 public interface ProjectService {
 
-    List<ProjectDto> findAll();
+    List<ProjectRequestDto> findAll();
 
-    ProjectDto findById();
+    ProjectRequestDto findById();
 
-    ProjectDto create(ProjectDto projectDto);
+    ProjectRequestDto create(ProjectRequestDto projectRequestDto);
 
-    ProjectDto update(ProjectDto projectDto);
+    ProjectRequestDto update(ProjectRequestDto projectRequestDto);
 
     void delete(Long id);
 }

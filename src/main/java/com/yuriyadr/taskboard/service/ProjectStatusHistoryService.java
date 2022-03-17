@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.ProjectStatusHistoryDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectStatusHistoryDto;
 
 import java.util.List;
 

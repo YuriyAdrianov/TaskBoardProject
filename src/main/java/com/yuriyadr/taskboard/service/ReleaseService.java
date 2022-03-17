@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.ReleaseDto;
+import com.yuriyadr.taskboard.dto.requestDto.ReleaseRequestDto;
 
 import java.util.List;
 
 public interface ReleaseService {
 
-    List<ReleaseDto> findAll();
+    List<ReleaseRequestDto> findAll();
 
-    ReleaseDto findById();
+    ReleaseRequestDto findById();
 
-    ReleaseDto create(ReleaseDto releaseDto);
+    ReleaseRequestDto create(ReleaseRequestDto releaseRequestDto);
 
-    ReleaseDto update(ReleaseDto releaseDto);
+    ReleaseRequestDto update(ReleaseRequestDto releaseRequestDto);
 
     void delete(Long id);
 }

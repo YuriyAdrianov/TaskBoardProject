@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.TaskDto;
+import com.yuriyadr.taskboard.dto.requestDto.TaskRequestDto;
 
 import java.util.List;
 
 public interface TaskService {
 
-    List<TaskDto> findAll();
+    List<TaskRequestDto> findAll();
 
-    TaskDto findById();
+    TaskRequestDto findById();
 
-    TaskDto create(TaskDto taskDto);
+    TaskRequestDto create(TaskRequestDto taskRequestDto);
 
-    TaskDto update(TaskDto taskDto);
+    TaskRequestDto update(TaskRequestDto taskRequestDto);
 
     void delete(Long id);
 }

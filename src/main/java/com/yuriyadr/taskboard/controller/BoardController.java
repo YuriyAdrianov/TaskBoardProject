@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.BoardDto;
+import com.yuriyadr.taskboard.dto.requestDto.BoardRequestDto;
 import com.yuriyadr.taskboard.service.BoardService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class BoardController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BoardDto> findById() {
+    public ResponseEntity<BoardRequestDto> findById() {
         return ResponseEntity.ok(boardService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<BoardDto>> findAll() {
+    public ResponseEntity<List<BoardRequestDto>> findAll() {
         return ResponseEntity.ok(boardService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<BoardDto> createBoard(@RequestBody BoardDto boardDto) {
-        return ResponseEntity.ok(boardService.create(boardDto));
+    public ResponseEntity<BoardRequestDto> createBoard(@RequestBody BoardRequestDto boardRequestDto) {
+        return ResponseEntity.ok(boardService.create(boardRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<BoardDto> updateBoard(@RequestBody BoardDto boardDto) {
-        return ResponseEntity.ok(boardService.update(boardDto));
+    public ResponseEntity<BoardRequestDto> updateBoard(@RequestBody BoardRequestDto boardRequestDto) {
+        return ResponseEntity.ok(boardService.update(boardRequestDto));
     }
 
     @DeleteMapping("/{id}")

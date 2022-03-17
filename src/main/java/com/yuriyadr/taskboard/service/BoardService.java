@@ -1,18 +1,18 @@
 package com.yuriyadr.taskboard.service;
 
-import com.yuriyadr.taskboard.dto.BoardDto;
+import com.yuriyadr.taskboard.dto.requestDto.BoardRequestDto;
 
 import java.util.List;
 
 public interface BoardService {
 
-    List<BoardDto> findAll();
+    List<BoardRequestDto> findAll();
 
-    BoardDto findById();
+    BoardRequestDto findById();
 
-    BoardDto create(BoardDto boardDto);
+    BoardRequestDto create(BoardRequestDto boardRequestDto);
 
-    BoardDto update(BoardDto boardDto);
+    BoardRequestDto update(BoardRequestDto boardRequestDto);
 
     void delete(Long id);
 }

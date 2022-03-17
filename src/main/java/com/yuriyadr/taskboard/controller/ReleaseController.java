@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.ReleaseDto;
+import com.yuriyadr.taskboard.dto.requestDto.ReleaseRequestDto;
 import com.yuriyadr.taskboard.service.ReleaseService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class ReleaseController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ReleaseDto> findById() {
+    public ResponseEntity<ReleaseRequestDto> findById() {
         return ResponseEntity.ok(releaseService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<ReleaseDto>> findAll() {
+    public ResponseEntity<List<ReleaseRequestDto>> findAll() {
         return ResponseEntity.ok(releaseService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<ReleaseDto> createRelease(@RequestBody ReleaseDto releaseDto) {
-        return ResponseEntity.ok(releaseService.create(releaseDto));
+    public ResponseEntity<ReleaseRequestDto> createRelease(@RequestBody ReleaseRequestDto releaseRequestDto) {
+        return ResponseEntity.ok(releaseService.create(releaseRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ReleaseDto> updateRelease(@RequestBody ReleaseDto releaseDto) {
-        return ResponseEntity.ok(releaseService.update(releaseDto));
+    public ResponseEntity<ReleaseRequestDto> updateRelease(@RequestBody ReleaseRequestDto releaseRequestDto) {
+        return ResponseEntity.ok(releaseService.update(releaseRequestDto));
     }
 
     @DeleteMapping("/{id}")

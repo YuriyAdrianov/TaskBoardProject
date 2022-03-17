@@ -1,6 +1,6 @@
 package com.yuriyadr.projectStatusboard.controller;
 
-import com.yuriyadr.taskboard.dto.ProjectStatusDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectStatusRequestDto;
 import com.yuriyadr.taskboard.service.ProjectStatusService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class ProjectStatusController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjectStatusDto> findById() {
+    public ResponseEntity<ProjectStatusRequestDto> findById() {
         return ResponseEntity.ok(projectStatusService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<ProjectStatusDto>> findAll() {
+    public ResponseEntity<List<ProjectStatusRequestDto>> findAll() {
         return ResponseEntity.ok(projectStatusService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<ProjectStatusDto> createProjectStatus(@RequestBody ProjectStatusDto projectStatusDto) {
-        return ResponseEntity.ok(projectStatusService.create(projectStatusDto));
+    public ResponseEntity<ProjectStatusRequestDto> createProjectStatus(@RequestBody ProjectStatusRequestDto projectStatusRequestDto) {
+        return ResponseEntity.ok(projectStatusService.create(projectStatusRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProjectStatusDto> updateProjectStatus(@RequestBody ProjectStatusDto projectStatusDto) {
-        return ResponseEntity.ok(projectStatusService.update(projectStatusDto));
+    public ResponseEntity<ProjectStatusRequestDto> updateProjectStatus(@RequestBody ProjectStatusRequestDto projectStatusRequestDto) {
+        return ResponseEntity.ok(projectStatusService.update(projectStatusRequestDto));
     }
 
     @DeleteMapping("/{id}")

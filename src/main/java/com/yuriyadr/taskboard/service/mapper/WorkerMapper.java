@@ -1,22 +1,20 @@
 package com.yuriyadr.taskboard.service.mapper;
 
-import com.yuriyadr.taskboard.dto.WorkerDto;
+import com.yuriyadr.taskboard.dto.requestDto.WorkerRequestDto;
 import com.yuriyadr.taskboard.entity.Worker;
 import org.springframework.stereotype.Component;
 
 @Component
 public class WorkerMapper {
-    public WorkerDto toDto(Worker worker) {
-        WorkerDto workerDto = new WorkerDto();
-        workerDto.setName(worker.getName());
-        workerDto.setActivity(worker.getActivity());
-        return workerDto;
+    public WorkerRequestDto toDto(Worker worker) {
+        WorkerRequestDto workerRequestDto = new WorkerRequestDto(worker.getName(), worker.getActivity());
+        return workerRequestDto;
     }
 
-    public Worker toEntity(WorkerDto workerDto) {
+    public Worker toEntity(WorkerRequestDto workerRequestDto) {
         Worker worker = new Worker();
-        worker.setName(workerDto.getName());
-        worker.setActivity(workerDto.getActivity());
+        worker.setName(workerRequestDto.getName());
+        worker.setActivity(workerRequestDto.getActivity());
         return worker;
     }
 }

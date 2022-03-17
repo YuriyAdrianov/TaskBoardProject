@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.ProjectWorkerDto;
+import com.yuriyadr.taskboard.dto.requestDto.ProjectWorkerRequestDto;
 import com.yuriyadr.taskboard.service.ProjectWorkerService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class ProjectWorkerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjectWorkerDto> findById() {
+    public ResponseEntity<ProjectWorkerRequestDto> findById() {
         return ResponseEntity.ok(projectWorkerService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<ProjectWorkerDto>> findAll() {
+    public ResponseEntity<List<ProjectWorkerRequestDto>> findAll() {
         return ResponseEntity.ok(projectWorkerService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<ProjectWorkerDto> createProjectWorker(@RequestBody ProjectWorkerDto projectWorkerDto) {
-        return ResponseEntity.ok(projectWorkerService.create(projectWorkerDto));
+    public ResponseEntity<ProjectWorkerRequestDto> createProjectWorker(@RequestBody ProjectWorkerRequestDto projectWorkerRequestDto) {
+        return ResponseEntity.ok(projectWorkerService.create(projectWorkerRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProjectWorkerDto> updateProjectWorker(@RequestBody ProjectWorkerDto projectWorkerDto) {
-        return ResponseEntity.ok(projectWorkerService.update(projectWorkerDto));
+    public ResponseEntity<ProjectWorkerRequestDto> updateProjectWorker(@RequestBody ProjectWorkerRequestDto projectWorkerRequestDto) {
+        return ResponseEntity.ok(projectWorkerService.update(projectWorkerRequestDto));
     }
 
     @DeleteMapping("/{id}")

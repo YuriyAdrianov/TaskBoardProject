@@ -1,6 +1,6 @@
 package com.yuriyadr.taskboard.controller;
 
-import com.yuriyadr.taskboard.dto.WorkerRoleDto;
+import com.yuriyadr.taskboard.dto.requestDto.WorkerRoleRequestDto;
 import com.yuriyadr.taskboard.service.WorkerRoleService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,23 +22,23 @@ public class WorkerRoleController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<WorkerRoleDto> findById() {
+    public ResponseEntity<WorkerRoleRequestDto> findById() {
         return ResponseEntity.ok(workerRoleService.findById());
     }
 
     @GetMapping
-    public ResponseEntity<List<WorkerRoleDto>> findAll() {
+    public ResponseEntity<List<WorkerRoleRequestDto>> findAll() {
         return ResponseEntity.ok(workerRoleService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<WorkerRoleDto> createWorkerRole(@RequestBody WorkerRoleDto workerRoleDto) {
-        return ResponseEntity.ok(workerRoleService.create(workerRoleDto));
+    public ResponseEntity<WorkerRoleRequestDto> createWorkerRole(@RequestBody WorkerRoleRequestDto workerRoleRequestDto) {
+        return ResponseEntity.ok(workerRoleService.create(workerRoleRequestDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<WorkerRoleDto> updateWorkerRole(@RequestBody WorkerRoleDto workerRoleDto) {
-        return ResponseEntity.ok(workerRoleService.update(workerRoleDto));
+    public ResponseEntity<WorkerRoleRequestDto> updateWorkerRole(@RequestBody WorkerRoleRequestDto workerRoleRequestDto) {
+        return ResponseEntity.ok(workerRoleService.update(workerRoleRequestDto));
     }
 
     @DeleteMapping("/{id}")
