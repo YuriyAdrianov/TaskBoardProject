@@ -1,6 +1,7 @@
 package com.yuriyadr.taskboard.controller;
 
 import com.yuriyadr.taskboard.dto.requestDto.BoardRequestDto;
+import com.yuriyadr.taskboard.dto.responseDto.BoardResponseDto;
 import com.yuriyadr.taskboard.service.BoardService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class BoardController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BoardRequestDto> findById() {
-        return ResponseEntity.ok(boardService.findById());
+    public ResponseEntity<BoardRequestDto> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(boardService.findById(id));
     }
 
     @GetMapping
@@ -37,8 +38,8 @@ public class BoardController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<BoardRequestDto> updateBoard(@RequestBody BoardRequestDto boardRequestDto) {
-        return ResponseEntity.ok(boardService.update(boardRequestDto));
+    public ResponseEntity<BoardRequestDto> updateBoard(@RequestBody BoardRequestDto boardRequestDto, @PathVariable Long id) {
+        return ResponseEntity.ok(boardService.update(boardRequestDto, id));
     }
 
     @DeleteMapping("/{id}")
